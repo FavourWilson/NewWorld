@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('Admin/Login/login');
+    return redirect('NewWorld/index');
 }); 
 
 
