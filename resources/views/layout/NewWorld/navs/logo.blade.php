@@ -157,13 +157,14 @@
                                        
                                         @if (Auth::check())
                                         <span class="width-22 height-22 bg-dark position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12 text-white">{{$cart->count()}}</span>
-                                        @endif
+                                        
 
-                                        @if ($cart[0]->ipAddress)
+                                        @elseif ($cart[0]->ipAddress)
                                         <span class="width-22 height-22 bg-dark position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12 text-white">{{$cart->count()}}</span>
-                                        @endif
+                                      
                                        
-                                        @if ($cart[0] == null)
+                                        @else
+                                        ($cart[0] == null)
                                         <span class="width-22 height-22 bg-dark position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12 text-white">0</span>
                                         @endif
                                         <span class="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3"></span>
