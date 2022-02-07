@@ -152,21 +152,7 @@
                                 <!-- End Search -->
                                 
                                 <li class="col pr-xl-0 px-2 px-sm-3">
-                                  @if($cart[0] != null)
-                                    <a href="{{url('NewWorld/cart/'.$cart[0]->id)}}" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
-                                        <i class="font-size-22 ec ec-shopping-bag"></i>
-                                       
-                                        @if (Auth::check())
-                                        <span class="width-22 height-22 bg-dark position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12 text-white">{{$cart->count()}}</span>
-                                        @endif
-
-                                        @if ($cart[0]->ipAddress)
-                                        <span class="width-22 height-22 bg-dark position-absolute d-flex align-items-center justify-content-center rounded-circle left-12 top-8 font-weight-bold font-size-12 text-white">{{$cart->count()}}</span>
-                                        @endif
-                                       
-                                        <span class="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3"></span>
-                                    </a>
-                                    @endif
+                                
                                     
                                 </li>
    
