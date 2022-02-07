@@ -43,13 +43,14 @@ class NewWorldController extends Controller
     
 
     $carousel = carousel::all();
+    
     $cart = cart::join('products','cart.productid','=','products.id')
     ->join('users','cart.userid','=','users.id')
     ->select('cart.*','products.productName','products.price','products.photo')
      ->where('cart.userid','=',Auth::id())
     ->get();
     $total = 0;
-
+    if($cart != null){
     foreach($cart as $c){
       $total = ($c->price * $c->quantity ) ;
     }
@@ -62,6 +63,7 @@ class NewWorldController extends Controller
       'total' => $total,
 
     ]);
+    }
 
     return $cart->id;
 
