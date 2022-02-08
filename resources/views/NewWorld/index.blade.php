@@ -135,15 +135,11 @@
                                                         <div class="text-gray-100"><sup>NGN</sup>{{$item->price}}</div>
                                                     </div>
                                                     <div class="d-none d-xl-block prodcut-add-cart">
-                                                        <a href="" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
+                                                        <a href="{{url('NewWorld/details/'.$item->id)}}" class="btn-add-cart btn-primary transition-3d-hover"><i class="ec ec-add-to-cart"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="product-item__footer">
-                                                <div class="border-top pt-2 flex-center-between flex-wrap">
-                                                    <a href="{{url('NewWorld/details/'.$item->id)}}" class="text-gray-6 font-size-13"><i class="ec ec-add-to-cart mr-1 font-size-15"></i> View {{$item->brandname}}</a>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </li>
