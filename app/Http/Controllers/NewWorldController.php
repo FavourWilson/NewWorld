@@ -143,7 +143,7 @@ class NewWorldController extends Controller
       $cart->userid = Auth::user()->id;
       $cart->productid = $request->id;
       $cart->quantity = $request->quan;
-      $cart->status = false;
+      $cart->status = true;
       $cart->ipaddress = exec('getmac');
       $cart->save();
     
