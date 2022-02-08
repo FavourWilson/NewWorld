@@ -153,6 +153,13 @@
                                 
                                 <li class="col pr-xl-0 px-2 px-sm-3">
                                   @if($cart[0]->id == null)
+                                     <a href="" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
+                                        <i class="font-size-22 ec ec-shopping-bag"></i>
+                                      
+                                       
+                                        <span class="d-none d-xl-block font-weight-bold font-size-16 text-gray-90 ml-3"></span>
+                                    </a>
+                                    else
                                      <a href="{{url('NewWorld/cart/'.$cart[0]->id)}}" class="text-gray-90 position-relative d-flex " data-toggle="tooltip" data-placement="top" title="Cart">
                                         <i class="font-size-22 ec ec-shopping-bag"></i>
                                        
