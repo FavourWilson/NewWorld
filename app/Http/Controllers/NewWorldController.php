@@ -47,7 +47,6 @@ class NewWorldController extends Controller
     $cart = cart::join('products','cart.productid','=','products.id')
     ->join('users','cart.userid','=','users.id')
     ->select('cart.*','products.productName','products.price','products.photo')
-     ->where('cart.userid','=',Auth::id())
     ->get();
     $total = 0;
     if($cart != null){
